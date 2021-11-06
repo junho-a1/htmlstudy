@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <input id="box1" type="text">
+        <input id="box2" type="text">
+        <button id='btn' onclick="func()">+</button>
+        <script>
+            var g_obj = {}
+                function func(){
+                    var box1 = document.getElementById('box1').value;
+                    var box2 = document.getElementById('box2').value;
+                    g_obj[box1] = box2;
+                }
+        </script>
+    </body>
+</html> 
