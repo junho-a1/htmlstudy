@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <style>
+            .box{
+                width: 100px;
+                height: 100;
+                background-color: red;
+                transition: background-color 2s;
+            }
+            .green{
+                background-color: green;
+            }
+
+            .blue{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <br>
+        <button id="change">red</button>
+        <button id="change">green</button>
+        <button id="change">blue</button>
+        <script>
+            function change(color){
+                if(color == 'red'){
+                    document.getElementById('box').className ="box";
+                }
+                else if(color == 'blue'){
+                    document.getElementById('box').className ="box blue";
+                }
+                else if(color == 'green'){
+                    document.getElementById('box').className ="box green";
+                }
+            }
+        </script>
+    </body>
+</html>

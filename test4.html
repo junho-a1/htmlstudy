@@ -1,0 +1,58 @@
+<html>
+    <style>
+            .buttonClear{
+                background-color: white;
+                color:black
+            }
+
+            .buttonClick{
+                background-color: green;
+                color:white
+            }
+    </style>
+    <body>
+        <button class = buttonClear, id='tab1' onclick="Click1()", > tab1 </button>
+        <button class = buttonClear, id='tab2' onclick="Click2()",> tab2 </button>
+        <button class = buttonClear, id='tab3' onclick="Click3()",> tab3 </button>
+        <h1 id='text1'>This is tab 1!</h1>
+
+        <div id='text2' style="display:none">
+            <h1>This is tab 2!</h1>
+        </div>
+
+        <div id='text3' style="display:none">       
+            <h1 id='text3'>This is tab 3!</h1>
+        </div>
+        <script>
+            function Click1(){
+              Reset()
+              document.getElementById('text1').style.display="block"
+              document.getElementById('text2').style.display="none"
+              document.getElementById('text3').style.display="none"
+              document.getElementById('tab1').className="buttonClick"
+            }
+
+            function Click2(){
+                Reset()
+              document.getElementById('text1').style.display="none"
+              document.getElementById('text2').style.display="block"
+              document.getElementById('text3').style.display="none"
+              document.getElementById('tab2').className="buttonClick"
+            }
+
+            function Click3(){
+                Reset()
+              document.getElementById('text1').style.display="none"
+              document.getElementById('text2').style.display="none"
+              document.getElementById('text3').style.display="block"
+              document.getElementById('tab3').className="buttonClick"
+            }
+
+            function Reset(){
+                document.getElementById('tab1').className="buttonClear"
+                document.getElementById('tab2').className="buttonClear"
+                document.getElementById('tab3').className="buttonClear"
+            }
+        </script>
+    </body>
+</html>
