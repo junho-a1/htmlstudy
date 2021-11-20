@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script>
+            String.prototype.forEach = function(a, callback){
+                var b = this.split(a);
+                for(var i=0; i<b.length; i++){
+                    callback(i, b[i]);
+                }
+            }
+        </script>
+    </body>
+</html> 

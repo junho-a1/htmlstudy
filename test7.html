@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <a><br>Name</a>
+        <input id="box1" type="text">
+        <a><br>Age</a>
+        <input id="box2" type="text">
+        <a><br>Id</a>
+        <input id="box3" type="text">
+        <a><br>PassWord</a>
+        <input id="box4" type="text">
+        <a><br>password Confirm</a>
+        <input id="box5" type="text">
+        <button id='btn' onclick="ConfirmCheck()">확인</button>
+        <h1 name="h1"> 1 </h1>
+        <script>
+            function ConfirmCheck(){
+                var isName = document.getElementById('box1').value;
+                var isAge = document.getElementById('box2').value;
+                var isId = document.getElementById('box3').value;
+                var pw = document.getElementById('box4').value;
+                var pwCheck = document.getElementById('box5').value;
+
+                if(!!isAge.match(/[^0-9]+/)){
+                    alert("나이가 문자입니다.");
+                    return;
+                }
+
+                if(pw != pwCheck){
+                    alert("비밀번호가 다릅니다.");
+                    return;
+                }
+
+                if(isName == "" || isAge == "" || isId =="" || pw =="" || pwCheck==""){
+                    alert("빈 칸이 있습니다.");
+                    return;
+                }
+            }
+        </script>
+    </body>
+</html> 
